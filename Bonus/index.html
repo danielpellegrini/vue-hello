@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <title>Vue Hello Bonus</title>
+</head>
+
+<body>
+
+  <div id="root">
+
+    <h1 :style="'display:' + visibleDisplay">What's your first name?</h1>
+    <input :style="'display:' + visibleDisplay" v-model="firstname">
+    <button :style="'display:' + visibleDisplay" @click="cheerFirst">SUBMIT</button>
+
+    <h1 :style="'display:' + hiddenDisplay">And your lastname?</h1>
+    <input :style="'display:' + hiddenDisplay" v-model="lastname">
+    <button :style="'display:' + hiddenDisplay" @click="cheerLast">SUBMIT</button>
+
+    <h1 :style="'position: absolute; left: 450px; top: 40px; display:' + cheerDisplay">Hello</h1>
+    <h1 :style="'position: absolute; left: 450px; top: 80px; display:' + cheerDisplay">{{ firstname }}</h1>
+    <h1 :style="'position: absolute; left: 450px; top: 110px; display:' + cheerDisplay">{{ lastname }}!</h1>
+    <img :style="'margin: 0; position: absolute; left: 350px; top: 0; display:' + cheerDisplay" :src = "'./img/' + imageBubble">
+
+      <a href="" @click="reset"><img :style="'margin-top: 50px; position: relative; display:' + cheerDisplay" :src = "'./img/' + image"></a>
+
+      <h3 :style="'margin-left: 90px;display:' + cheerDisplay">Click me to refresh the page!</h3>
+
+
+  </div>
+
+  <script src="js/script.js" charset="utf-8"></script>
+</body>
+
+</html>
